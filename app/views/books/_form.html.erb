@@ -1,0 +1,51 @@
+<%= form_with(model: @author_book, url: books_path) do |form| %>
+  <% if @author_book.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@author_book.errors.count, "error") %> prohibited this book from being saved:</h2>
+
+      <ul>
+        <% @author_book.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :タイトル %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :価格 %>
+    <%= form.number_field :price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :出版日 %>
+    <%= form.date_select :publish_date %>
+  </div>
+
+  <br>
+
+  <h1>作者情報</h1>
+
+  <div class="field">
+    <%= form.label :名前 %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :出身地 %>
+    <%= form.text_field :birth_place %>
+  </div>
+
+  <div class="field">
+    <%= form.label :生年月日 %>
+    <%= form.date_select :birth_date %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

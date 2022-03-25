@@ -1,4 +1,12 @@
-#FormObject Sample
+# FormObject Sample
+
+### 〜参考記事〜
+
+NEW & CREATE
+
+【Rails】ロジックを1つに集約できるデザインパターン「Form Object」を簡易実装してみた
+
+https://techtechmedia.com/form-object-implementation/
 
 # README
 
